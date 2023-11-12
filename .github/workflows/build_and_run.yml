@@ -1,0 +1,20 @@
+name: Build and Run Docker Container
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker build -t cypress_with_docker .
+
+    - name: Run Docker container
+      run: docker run cypress_with_docker
