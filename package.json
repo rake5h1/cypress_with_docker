@@ -17,7 +17,7 @@
     "firefox:test": "npm run pretest && npm run firefox:scripts || npm run posttest"
   },
   "keywords": [],
-  "author": "QA BOX <qabox@gmail.com>",
+  
   "license": "MIT",
   "dependencies": {
     "cypress": "^6.8.0",
